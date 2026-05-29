@@ -399,3 +399,19 @@ footer{
     text-align: center;
     margin-bottom: 30px;
 }
+
+.goals_content_container p {
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #4CAF50;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
