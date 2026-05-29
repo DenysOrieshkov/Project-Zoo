@@ -114,9 +114,7 @@ nav{
 .Gifky{
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 20px 0px;
-    height: 200px;
+    height: 50vh;
 }
 .second_page{
     display: flex;
