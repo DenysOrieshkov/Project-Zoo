@@ -10,6 +10,8 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e1ffe1;
+    color: #333;
 }
 .container{
     max-width: 1000px;
@@ -138,10 +140,6 @@ nav{
     height: 50vh;
 }
 
-
-
-
-
 /**second_page*/
 .second_page{
     display: flex;
@@ -149,6 +147,10 @@ nav{
     gap: 20px;
 }
 
+input[type="radio"]:first-of-type, 
+input[type="checkbox"]:first-of-type {
+    margin-left: 0;
+}
 
 .form{
     min-width: 50%;
@@ -314,4 +316,32 @@ footer{
 .zoo-btn:active {
     transform: translateY(1px); 
     box-shadow: 0 2px 10px rgba(46, 125, 50, 0.4);
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form_container, .goals_container {
+    flex: 1;
+    background-color: #ffffff;
+    
+    border: 1px solid #d1d1d1; 
+    border-radius: 12px; 
+    
+    padding: 40px;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form_container h2, .goals_container h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
