@@ -174,14 +174,6 @@ nav{
 
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
-.slides{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height:40vh;
-}
-
 .first_page_container{
     padding: 20px 0;
 }
@@ -195,7 +187,8 @@ nav{
 
 /*Slides*/
 .slides{
-    padding: 40px 20px;
+    padding: 20px 10px;
+    display: block;
 }
 .slides_container{
     display: flex;
