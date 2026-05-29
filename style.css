@@ -325,3 +325,33 @@ footer{
     transform: scale(1.05);
     transition-duration: 250ms;
 }
+
+.zoo-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+.zoo-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.6);
+    background: linear-gradient(135deg, #45a049, #1b5e20);
+}
+
+
+.zoo-btn:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 10px rgba(46, 125, 50, 0.4);
+}
