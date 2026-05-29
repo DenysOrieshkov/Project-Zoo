@@ -99,20 +99,14 @@ nav{
 }
 
 
-
 .page{
     width: 100%;
     min-height: 100vh;
     padding: 20px;
 }
-.page_title{
-    font-size: 30px;
-    color: white;
-    
-}
 /*first_page*/
 .first_page{
-    background-image: url(./tiger1.jpg);
+    background-image: url(./tiger.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -126,14 +120,16 @@ nav{
 
 
 
+
+
 /**second_page*/
-.second_page_container{
+.second_page{
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-/* form */
+
 .form{
     min-width: 50%;
 }
