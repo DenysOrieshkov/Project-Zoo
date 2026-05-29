@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+main{
+    margin: 0px;
+}
+.main_content{
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Menu*/
+
+nav{
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+}
+
+
+.menu{
+    overflow: hidden;
+    display: flex;
+    padding: 0px 40px;
+    list-style: none;
+    justify-content:center;
+    
+}
+.first{
+    border-left: #5e5e5e solid 1px;
+}
+
+.menu a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+.menu_item{
+    display: block;
+
+    padding: 30px 50px;
+    border-right: #5e5e5e solid 1px;
+    align-items: center;
+}
+
+.menu_item:hover{
+    transition-duration: 250ms;
+    background-color: rgb(116, 47, 47);  
+}
+.menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    background-color: white;
+    transition-duration: 250ms;
+}
+
+.menu_item:hover a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+}
+
+
+.page{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+/*first_page*/
+.first_page{
+    background-image: url(./tiger2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+}
+
+/**second_page*/
+.second_page{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* form */
+.form{
+    min-width: 50%;
+}
+
+.form_container{
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(155, 155, 155);
+    color: black;
+    padding: 20px 30px;
+    position: relative;
+}
+.footer_container h2{
+    text-align: center;
+    margin: 0px auto;
+}
+.form_container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.submit_btn{
+    padding: 10px 30px;
+    width: 40%;
+    background-color: transparent;
+    border: 2px solid green;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    
+    text-transform: uppercase;
+}
+.submit_btn:hover{
+    background-color: green;
+    color: white;
+    transition-duration: 250ms;
+}
+
+form label{
+    display: block;
+    margin-bottom: 5px;
+}
+.select_container label{
+    display: inline;
+    margin-bottom: 0px;
+}
+.age_container label{
+    display: inline;
+    margin-bottom: 0px;
+}
+.info_container label{
+    display: inline;
+    margin-bottom: 0px;
+}
+.input_container{
+    width: 80%;
+}
+.input{
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 5px;
+}
+.input:focus{
+    outline: none;
+    border-color: green;
+}
+
+/*GOALS*/
+.goals_container{
+    min-width: 40%;
+    color: black;
+    padding: 20px 30px;
+}
+.goals {
+    list-style: inside;
+    margin: 20px 0px;
+}
+
+
+/*FOOTER*/
+footer{
+    margin-top: auto;
+    background-color: #333;
+    padding: 20px 50px;
+    color: white;
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.square{
+    background-color: rgb(192, 192, 192);
+    padding: 10px;
+}
+
+
+/*TITLE*/
+
+.title_container{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.title2{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+}
+.title3{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/*IMG*/
+.link_container{
+    text-align: center;
+    margin-top: 20px;
+}
+.img_zoo{
+    width: 80%;
+    height: auto;
+}
+.img_zoo:hover{
+    transform: scale(1.05);
+    transition-duration: 250ms;
+}

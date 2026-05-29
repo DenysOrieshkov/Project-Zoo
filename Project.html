@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Discord</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class = "menu">
+                <li class = "menu_item first"><a href="#">Home</a></li>
+                <li class = "menu_item"><a href="#">Work</a></li>
+                <li class = "menu_item"><a href="#">Services</a></li>
+                <li class = "menu_item"><a href="#">About</a></li>
+                <li class = "menu_item"><a href="#contact">Contact</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <main>
+        <div class = "main_content">
+            <div class="first_page page">
+                
+            </div>
+            <div class="container">
+                    <div class="second_page page">
+                        <div class="form">
+                            <div class="form_container">
+                                <form action="">
+                                    <h2 class="title2">Zgłoszenie do nas</h2>
+                                    <div class = "imie_container input_container">
+                                        <label for="imie">Imię:</label>
+                                        <input type="text" class = "input" placeholder="Imię" name = "imie" required>
+                                    </div>
+                                    <div class = "nazwisko_container input_container">
+                                        <label for="nazwisko">Nazwisko:</label>
+                                        <input type="text" class = "input" placeholder="Nazwisko" name = "nazwisko" required>
+                                    </div>
+                                    <div class = "email_container input_container">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class = "input" placeholder="Email" name = "email" required>
+                                    </div>
+
+                                    <div class = "poczta_container input_container">
+                                        <label for="poczta">Kod pocztowy:</label>
+                                        <input type="text" class = "input" pattern="[0-9]{2}-[0-9]{3}" placeholder="XX-XXX" name = "poczta" required>
+                                    </div>
+
+                                    <div class = "select_container input_container">
+                                        <label for="plec">Płeć:</label>
+                                        <select name="" id="plec">
+                                            <option value="M">Mężczyzna</option>
+                                            <option value="K">Kobieta</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class = "age_container">
+                                        <label for="wiek">Wiek:</label>
+                                        <input type="radio" id = "adult" name="wiek" value="adult">
+                                        <label for="adult">Dorosły</label>
+                                        <input type="radio" id = "child" name="wiek" value="child">
+                                        <label for="child">Dziecko</label>
+                                        <input type="radio" id = "teen" name="wiek" value="teen">
+                                        <label for="teen">Nastolatek</label>
+                                    </div>
+
+                                    <div class = "info_container">
+                                        <label for="info">Jak dowiedziałeś się o wydarzeniu?</label>
+                                        <input type = "checkbox" id = "od_znajonych" name="info" value="od_znajomych">
+                                        <label for="od_znajonych">Od znajomych</label>
+                                        <input type = "checkbox" id = "w_internecie" name="info" value="w_internecie">
+                                        <label for="w_internecie">W internecie</label>
+                                    </div>
+                                    <button class = "submit_btn" type="submit">Zapisać się</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="goals">
+                            <div class="goals_container">
+                                <div class="title_container">
+                                    <h2 class="title2">Nasze cele</h2>
+                                </div>
+                                <div class="goals_content_container">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                                    consequatur, voluptate quisquam doloremque cumque, deleniti
+                                    corporis sed, magnam nisi voluptate quisquam doloremque cumque,
+                                    deleniti corporis sed, magnam nisi.</p>
+                                    <ul class="goals">
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                        <li>Voluptas consequatur, voluptate quisquam doloremque cumque, deleniti corporis sed, magnam nisi.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consequatur, voluptate quisquam doloremque cumque, deleniti corporis sed, magnam nisi.</li>
+                                    </ul>
+                                </div>
+                                <div class="zoo_link_container">
+                                    <div class="title_container">
+                                        <h3 class="title3">Odwiedź Orientarium Zoo Łódź</h3>
+                                    </div>
+                                    <div class="link_container">
+                                        <div class="img_link">
+                                            <a href="https://orientarium.lodz.pl/en/?srsltid=AfmBOopk-19amKLT-cSkVMzCduEy-2oDvmrepHhdewod7ByzMIc-urAi" class="link">
+                                                <img src="./zoo lodz logo.png" alt="" class="img_zoo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_container">
+                <p>&copy; Vadym Riznyk, Denys Orieshkov, Oleh Tokar<br>2026 Zoo Orientarium</p>
+                <address id = "contact">
+                    Bohdana Stefanowskiego 18/22<br>
+                    90-001 Łódź, Polska
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
