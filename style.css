@@ -74,7 +74,7 @@ nav{
     transition: color 0.25s ease;
 }
 
-/* Підкреслення з центру */
+/*Menu underline*/
 .menu a::after {
     content: "";
     position: absolute;
@@ -116,7 +116,7 @@ nav{
 
 
 /**second_page*/
-.second_page{
+.second_page_container{
     display: flex;
     justify-content: space-between;
     gap: 20px;
