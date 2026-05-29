@@ -113,6 +113,20 @@ nav{
     height: 100vh;
     width: 100%;
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:50vh;
+}
+.slides{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:40vh;
+}
 
 .first_page_container{
     padding: 20px 0;
