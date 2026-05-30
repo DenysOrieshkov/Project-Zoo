@@ -12,7 +12,7 @@ body{
     padding: 0;
     color: #333;
 
-    background-image: url('./background.png');
+    background-image: url('./images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
@@ -106,7 +106,7 @@ nav{
 }
 /*first_page*/
 .first_page{
-    background-image: url(./tiger.jpg);
+    background-image: url(./images/tiger.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -361,13 +361,17 @@ form label{
 
 /*GOALS*/
 .goals_container{
-    min-width: 40%;
+    min-width: 50%;
     color: black;
     padding: 20px 30px;
 }
 .goals {
     list-style: inside;
-    margin: 20px 0px;
+}
+
+.img_zoo{
+    border-radius: 10px;
+    border: 2px black solid;
 }
 
 
@@ -425,48 +429,40 @@ footer{
 
 
 /*IMG*/
-.link_container{
+.link_container {
     text-align: center;
     margin-top: 20px;
 }
-.img_zoo{
+
+.link_container a {
+    display: inline-block;
+}
+
+.img_zoo {
     width: 80%;
     height: auto;
-}
-.img_zoo:hover{
-    transform: scale(1.05);
-    transition-duration: 250ms;
+    display: block;
+    border-radius: 8px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.zoo-btn {
-    display: inline-block;
-    padding: 15px 35px;
-    font-size: 18px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
-    
-    transition: all 0.3s ease;
-    cursor: pointer;
+.img_zoo:hover {
+    /* Піднімається — тінь падає вліво-вниз */
+    transform: translate(4px, -4px);
+    box-shadow: 
+        -8px 8px 0px #888,
+}
+
+.img_zoo:active {
+    transform: translate(4px, -4px);
+    box-shadow: 
+        1px 1px 0px #888,
+        2px 2px 0px #aaa;
+    transition-duration: 0.05s;
 }
 
 
-.zoo-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.6);
-    background: linear-gradient(135deg, #45a049, #1b5e20);
-}
-
-
-.zoo-btn:active {
-    transform: translateY(1px); 
-    box-shadow: 0 2px 10px rgba(46, 125, 50, 0.4);
-}
 
 .content_wrapper {
     display: flex;
@@ -501,6 +497,7 @@ footer{
     color: #4a4a4a;
     margin-bottom: 20px;
 }
+
 
 input[type="radio"], input[type="checkbox"] {
     accent-color: #4CAF50;
