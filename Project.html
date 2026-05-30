@@ -59,19 +59,52 @@
                             <div class="title">Zwierzęta</div>
                         </div>
 
-                        <div class="slides_row">
-                            <div class="slider">
-                                <div class="img_container">
-                                    <img src="./girafik2.jpg" alt="" class="animal_img">
+                        <div class="slider_wrapper">
+                            <button class="arrow arrow_left" onclick="changeSlide(-1)">&#8592;</button>
+
+                            <div class="slides_row active" data-index="0">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./girafik1.jpg" alt="Giraffe" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Giraffe</div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi architecto incidunt beatae optio fugiat odit corporis.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est velit enim porro dignissimos culpa?</p>
                                 </div>
                             </div>
-                            <div class="content">
-                                <div class="title3">Giraffe</div>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi architecto incidunt beatae optio fugiat odit corporis. Laboriosam, impedit et sit quasi aliquid dolor provident in quo, harum similique numquam aliquam.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est velit enim porro dignissimos culpa? Dolorum, eius libero eos expedita quos molestias consequatur commodi perferendis id praesentium beatae sint error. Hic?</p>
+
+                            <div class="slides_row" data-index="1">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./red_panda.jpg" alt="Red Panda" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Red Panda</div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi architecto incidunt beatae optio fugiat odit corporis.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est velit enim porro dignissimos culpa?</p>
+                                </div>
                             </div>
+
+                            <div class="slides_row" data-index="2">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./elephants2.png" alt="Elephant" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Elephants</div>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi architecto incidunt beatae optio fugiat odit corporis.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est velit enim porro dignissimos culpa?</p>
+                                </div>
+                            </div>
+
+                            <button class="arrow arrow_right" onclick="changeSlide(1)">&#8594;</button>
                         </div>
 
+                        <div class="dots" id="dots"></div>
                     </div>
                 </div>
             </div>
