@@ -32,17 +32,10 @@ main{
 }
 .main_content{
 }
-.title{
-    font-size: 30px;
-}
 
 ul{
     margin: 0;
     padding: 0;
-}
-
-.content{
-    padding: 20px;
 }
 
 
@@ -195,19 +188,13 @@ nav{
 
 /*Slides*/
 .slides {
-    padding: 20px 10px;
+    padding: 0px 10px;
     display: block;
 }
 
 .slides_container {
     display: flex;
     flex-direction: column;
-}
-
-.title_container .title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 10px;
 }
 
 .slider_wrapper {
@@ -217,17 +204,26 @@ nav{
 }
 
 .slides_row {
+    min-height: 300px;
     display: none;
     flex-direction: row;
-    gap: 40px;
-    align-items: flex-start;
-    padding: 20px;
+    gap: 20px;
+    align-items: stretch;
+    padding: 0 20px;
     flex: 1;
     animation: fadeIn 0.4s ease;
 }
 
 .slides_row.active {
     display: flex;
+}
+
+.slides_row .content{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @keyframes fadeIn {
@@ -396,7 +392,7 @@ form label{
 footer{
     margin-top: auto;
     background-color: #333;
-    padding: 20px 50px;
+    padding: 40px 50px;
     color: white;
 }
 .footer_container{
@@ -411,11 +407,27 @@ footer{
 }
 
 
-/*TITLE*/
+/*TITLES*/
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+.title::after{
+    content: "";
+    background-color: #2E7D32;
+    height: 2.22px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
 
 .title_container{
     text-align: center;
     padding: 15px;
+    margin-bottom: 10px;
 }
 .title2{
     font-size: 30px;
