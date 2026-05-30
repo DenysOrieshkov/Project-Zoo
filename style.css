@@ -21,7 +21,6 @@ body{
 .container{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0;
 }
 
 main{
@@ -103,9 +102,7 @@ nav{
 
 
 .page{
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px;
+    padding: 40px 0;
 }
 /*first_page*/
 .first_page{
@@ -172,20 +169,10 @@ nav{
 
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
-.first_page_container{
-    padding: 20px 0;
-}
-/**second_page*/
-.Gifky{
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-}
 
 
 /*Slides*/
 .slides {
-    padding: 0px 10px;
     display: block;
 }
 
