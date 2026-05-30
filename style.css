@@ -10,16 +10,19 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e1ffe1;
+    
     color: #333;
+
 
     background-image: url('./background.png');
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    margin: 0;
+    background-repeat: repeat;
+    
+    /* Змінено з fixed на scroll (або можна взагалі видалити цей рядок, бо scroll — це стандарт) */
+    background-attachment: scroll; 
+    
+  
 }
 .container{
     max-width: 1000px;
