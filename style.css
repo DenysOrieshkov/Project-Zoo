@@ -516,12 +516,9 @@ footer{
 
 .form_container h2, .goals_container h2 {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
-.form_container .title_container {
-    padding: 5px 0;
-    margin-bottom: 15px;
-}
+
 .goals_content_container p {
     line-height: 1.7;
     color: #4a4a4a;
@@ -539,7 +536,7 @@ input[type="radio"], input[type="checkbox"] {
     cursor: pointer;
 }
 
-
+ 
 .gender_options {
     display: flex;
     flex-direction: row;
@@ -557,7 +554,6 @@ input[type="radio"], input[type="checkbox"] {
     display: none;
 }
 
- 
 .option_content {
     display: flex;
     align-items: center;
@@ -569,8 +565,9 @@ input[type="radio"], input[type="checkbox"] {
     background-color: #fafdfa;
     transition: all 0.2s ease;
     min-height: 42px;  
+    box-sizing: border-box;  
 }
- 
+
 .option_marker {
     display: flex;
     align-items: center;
@@ -590,6 +587,7 @@ input[type="radio"], input[type="checkbox"] {
     font-size: 14px;  
     color: #333;
     white-space: nowrap; 
+}  
 
  
 .gender_option:hover .option_content {
@@ -613,6 +611,7 @@ input[type="radio"], input[type="checkbox"] {
     color: #2E7D32;
     font-weight: bold;
 }
+
  
 @media (max-width: 480px) {
     .gender_options {
