@@ -36,8 +36,7 @@ ul{
     margin: 0;
     padding: 0;
 }
-
-/*Menu*/
+ 
 nav{
     background-color: #333;
     width: 100%;
@@ -80,9 +79,7 @@ nav{
 
     position: relative;
     transition: color 0.25s ease;
-}
-
-/*Menu underline*/
+} 
 .menu a::after {
     content: "";
     position: absolute;
@@ -186,8 +183,7 @@ nav{
 
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
-
-/*Slides*/
+/*-------------- ZWIRI SLIDER --------------*/
 .slides {
     display: block;
     font-size: 17px;
@@ -291,10 +287,6 @@ nav{
 .dot.active {
     background: #2E7D32;
 }
-
-
-/**second_page*/
-
 .second_page{
     display: flex;
     justify-content: space-between;
@@ -538,7 +530,7 @@ footer {
 }
 
 
-/*TITLES*/
+/*-----------TITLES-----------*/
 .title{
     font-size: 28px;
     font-weight: 700;
@@ -570,9 +562,6 @@ footer {
     font-style: normal;
     font-weight: 400;
 }
-
-
-/*IMG*/
 .link_container {
     text-align: center;
     margin-top: 20px;
@@ -580,33 +569,25 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
-
 .link {
     display: inline-block;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .link:hover {
     transform: translate(4px, -4px);
     box-shadow: -5px 5px 0px #000000;
 }
-
 .link:active {
     transform: translate(-2px, 2px);
     box-shadow: -1px 1px 0px #000000;
     transition-duration: 0.05s;
 }
-
 .img_zoo {
     height: auto;
     display: block;
     border-radius: 8px;
 }
-
-
-
 .content_wrapper {
     display: flex;
     justify-content: space-between;
@@ -682,8 +663,7 @@ input[type="radio"], input[type="checkbox"] {
     transition: all 0.2s ease;
     min-height: 42px;  
     box-sizing: border-box;  
-}
-
+} 
 .option_marker {
     display: flex;
     align-items: center;
@@ -697,15 +677,12 @@ input[type="radio"], input[type="checkbox"] {
     color: #777;
     background-color: #ffffff;
     flex-shrink: 0;
-}
-
+} 
 .option_label {
     font-size: 14px;  
     color: #333;
     white-space: nowrap; 
-}  
-
- 
+}   
 .gender_option:hover .option_content {
     border-color: #2E7D32;
     background-color: #f1f8f2;
@@ -735,22 +712,22 @@ input[type="radio"], input[type="checkbox"] {
         gap: 6px;
     }
 }
+
+/*---------- ERRORS ----------*/
 .error-text {
-    color: #d32f2f; /* Червоний колір */
+    color: #d32f2f;  
     font-size: 13px;
     margin-top: 8px;
     font-weight: bold;
-    animation: shake 0.4s ease-in-out; /* Ефект тремтіння */
+    animation: shake 0.4s ease-in-out;  
 }
-
-/* Ефект для привернення уваги */
+ 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
 }
-
-/* Додамо червону рамку кнопкам, якщо не вибрано */
+ 
 .form_invalid .option_content {
     border-color: #d32f2f;
 }
@@ -759,9 +736,19 @@ input[type="radio"], input[type="checkbox"] {
     border-color: #d32f2f !important;
     background-color: #fff8f8;
 }
-
-/* Робимо так, щоб при фокусі на помилковому полі рамка теж залишалася червоною */
+ 
 .input_invalid:focus {
     border-color: #d32f2f !important;
     box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+.form {
+    min-width: 50%;
+    display: flex;         
+    flex-direction: column; 
+}
+
+.goals {
+    list-style: inside;
+    display: flex;         
+    flex-direction: column; 
 }
