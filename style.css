@@ -8,6 +8,7 @@
 body{
     height: 100vh;
    font-family:Cursive;
+   font-size: 15.3333333px;
     margin: 0;
     padding: 0;
     color: #333;
@@ -71,7 +72,7 @@ nav{
     color: rgba(255, 255, 255, 0.82);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 13px;
+   
     font-weight: 300; 
     letter-spacing: 0.18em;
 
@@ -102,9 +103,9 @@ nav{
 
 
 .page{
-    padding: 60px 0;
+    padding: 30px 0;
 }
-/*first_page*/
+
 .first_page{
     background-image: url(./images/tiger.jpg);
     background-repeat: no-repeat;
@@ -130,7 +131,7 @@ nav{
     font-weight: 400;
 }
 .info_content {
-    font-size: 15px;
+     font-size: 18.68px;
     overflow: hidden; 
 }
 .info_img_right {
@@ -470,7 +471,7 @@ footer{
     align-items: stretch;
     gap: 40px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 0 20px;
 }
 
