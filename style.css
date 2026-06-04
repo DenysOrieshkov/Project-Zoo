@@ -410,6 +410,7 @@ select.input:focus {
     padding: 20px 30px;
 }
 .goals {
+    font-size: 17px;
     list-style: inside;
 }
 
