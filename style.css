@@ -180,7 +180,6 @@ nav{
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
 
-
 /*Slides*/
 .slides {
     display: block;
@@ -285,8 +284,8 @@ nav{
 }
 
 
-
 /**second_page*/
+
 .second_page{
     display: flex;
     justify-content: space-between;
