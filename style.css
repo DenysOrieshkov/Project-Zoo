@@ -74,7 +74,7 @@ nav{
     text-transform: uppercase;
    
     font-weight: 300; 
-    font-size: 15px;
+    font-size: 1.1em;
     letter-spacing: 0.18em;
 
     position: relative;
@@ -134,7 +134,7 @@ nav{
 
 .info{
     width: 100%;
-    font-size: 17px;
+    font-size: 1.3em;
 }
 .info_title_box {
     text-align: center;
@@ -186,7 +186,7 @@ nav{
 /*-------------- ZWIRI SLIDER --------------*/
 .slides {
     display: block;
-    font-size: 17px;
+    font-size: 1.3em;
 }
 
 .slides_container {
@@ -201,7 +201,7 @@ nav{
 }
 
 .slides_row {
-    min-height: 350px;
+    min-height: 360px;
     display: none;
     flex-direction: row;
     gap: 30px;
@@ -230,8 +230,8 @@ nav{
 }
 
 .img_container {
-    height: 320px;
-    width: 250px;
+    height: 330px;
+    width: 260px;
     overflow: hidden;
     border-radius: 4px;
     background-color: #d2d2d2;
@@ -410,7 +410,7 @@ select.input:focus {
     padding: 20px 30px;
 }
 .goals {
-    font-size: 17px;
+    font-size: 1.2em;
     list-style: inside;
 }
 
@@ -426,7 +426,7 @@ select.input:focus {
 footer {
     background-color: #1a1a1a;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .footer_top {
