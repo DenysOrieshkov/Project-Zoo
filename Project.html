@@ -142,16 +142,39 @@
                                         <input type="text" class = "input" pattern="[0-9]{2}-[0-9]{3}" placeholder="XX-XXX" name = "poczta" required>
                                     </div>
 
-                                    <div class = "select_container input_container">
-                                        <label for="plec">Płeć:</label>
-                                        <select name="" id="plec">
-                                            <option value="M">Mężczyzna</option>
-                                            <option value="K">Kobieta</option>
-                                        </select>
+                              <div class="gender_radio_container input_container">
+                                        <label>Płeć:</label>
+                                        <div class="gender_options">
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="M" required>
+                                                <div class="option_content">
+                                                    <span class="option_marker">A</span>
+                                                    <span class="option_label">Mężczyzna</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="K">
+                                                <div class="option_content">
+                                                    <span class="option_marker">B</span>
+                                                    <span class="option_label">Kobieta</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="N">
+                                                <div class="option_content">
+                                                    <span class="option_marker">C</span>
+                                                    <span class="option_label">Nie podaję</span>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
 
+                                    <!-- можна забрати в теорії-->
 
-                                    <div class = "age_container">
+
+                                    <!-- <div class = "age_container">
                                         <label for="wiek">Wiek:</label>
                                         <input type="radio" id = "adult" name="wiek" value="adult">
                                         <label for="adult">Dorosły</label>
@@ -159,15 +182,17 @@
                                         <label for="child">Dziecko</label>
                                         <input type="radio" id = "teen" name="wiek" value="teen">
                                         <label for="teen">Nastolatek</label>
-                                    </div>
+                                    </div> -->
 
-                                    <div class = "info_container">
+                                    <!-- <div class = "info_container">
                                         <label for="info">Jak dowiedziałeś się o wydarzeniu?</label>
                                         <input type = "checkbox" id = "od_znajonych" name="info" value="od_znajomych">
                                         <label for="od_znajonych">Od znajomych</label>
                                         <input type = "checkbox" id = "w_internecie" name="info" value="w_internecie">
                                         <label for="w_internecie">W internecie</label>
-                                    </div>
+                                    </div> -->
+
+
                                     <button class = "submit_btn" type="submit">Zapisać się</button>
                                 </form>
                             </div>
@@ -179,8 +204,7 @@
                                 </div>
                                 <div class="goals_content_container">
                                     <p>Wierzymy, że każde zwierzę zasługuje na bezpieczne życie i troskę. Dlatego naszym celem jest wspieranie zwierząt w Orientarium Zoo w Łodzi – miejscu, gdzie natura spotyka się z człowiekiem.
-                                    Chcemy nie tylko pomagać, ale także inspirować innych do działania. Edukujemy, pokazujemy i zachęcamy, aby każdy mógł stać się częścią tej ważnej misji. Bo nawet najmniejszy gest może zmienić bardzo wiele.
-                                    Każde wsparcie ma znaczenie – dla zwierząt, dla środowiska i dla przyszłych pokoleń.</p>
+                                    Chcemy nie tylko pomagać, ale także inspirować innych do działania. Edukujemy, pokazujemy i zachęcamy, aby każdy mógł stać się częścią tej ważnej misji.</p>
                                     <p>Co robimy?<br>•pomagamy poprawiać warunki życia zwierząt
                                     •wspieramy działania ochronne i ekologiczne
                                     •organizujemy wydarzenia i akcje edukacyjne
@@ -213,7 +237,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- тваринки -->
     <script>
         const slides = document.querySelectorAll('.slides_row');
         const dotsContainer = document.getElementById('dots');
