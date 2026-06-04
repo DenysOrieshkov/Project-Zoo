@@ -12,7 +12,7 @@ html {
 body{
     height: 100vh;
     font-family: Cursive;
-    font-size: 17px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     color: #333;
@@ -137,6 +137,7 @@ nav{
 
 .info{
     width: 100%;
+    font-size: 17px;
 }
 .info_title_box {
     text-align: center;
@@ -189,6 +190,7 @@ nav{
 /*Slides*/
 .slides {
     display: block;
+    font-size: 17px;
 }
 
 .slides_container {
