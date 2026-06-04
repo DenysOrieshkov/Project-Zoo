@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Zapis na wydarzenia charytatywne</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class = "menu">
+                <li class = "menu_item first"><a href="#dom">Główna</a></li>
+                <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
+                <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
+                <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
+                <li class = "menu_item"><a href="#contact">Kontakty</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <main>
+        <div class = "main_content">
+           <!-- ТІГРУСИk ПОТУЖНІЧ-->
+            <div class="first_page page" id="dom"> </div> 
+            <div class="first_page_connect page" id="dom"> </div> 
+           
+           <!-- Інфа пр0 ЗАХІД -->
+            <div class="info page" id="info"> 
+                <div class="container">
+                    <div class="title_container">
+                        <h2 class="title">O wydarzeniu</h2>
+                    </div>
+
+                    <div class="info_content">
+                        <div class="info_img_right">
+                            <img src="./images/elephant.jpg" alt="Slon" class="responsive_img">
+                         </div>
+                        
+                        <p>Kochasz zwierzęta? My też! Dlatego organizujemy wyjątkowy dzień w łódzkim zoo — pełen zabawy, emocji i dobrego serca. Przyjdź, pobaw się i pomóż nam zadbać o naszych futrzastych przyjaciół!</p>
+                        <p>Każdy bilet to realna pomoc dla zwierząt. Proste, prawda? </p>
+
+                        <div class="info_img_left">
+                            <img src="./images/red_panda.jpg" alt="PandaM" class="responsive_img">
+                        </div>
+                        <br> <br>  
+                        <p>Czeka na Ciebie karmienie zwierząt, warsztaty dla dzieci, konkursy z nagrodami i mnóstwo niespodzianek! Przyjdź z rodziną, znajomymi — albo po prostu sam. Tu każdy jest mile widziany, a zwierzęta będą Ci za to wdzięczne!</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Слайдові Звірятонька -->
+            <div class="slides page" id="slides">
+                <div class="container">
+                    <div class="slides_container">
+                        <div class="title_container">
+                            <div class="title">Zwierzęta</div>
+                        </div>
+
+                        <div class="slider_wrapper">
+                            <button class="arrow arrow_left" onclick="changeSlide(-1)">&#8592;</button>
+
+                            <div class="slides_row active">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./images/girafik1.jpg" alt="Giraffe" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Żyrafy</div>
+                                    <div class="text">
+                                        <p>Poznaj nasze najwyższe mieszkanki! Żyrafy to niezwykle eleganckie zwierzęta, które spędzają większość dnia na skubaniu liści z najwyższych partii drzew. Czy wiesz, że ich niezwykle długi, fioletowo-czarny język może mieć nawet 45 centymetrów długości? Pomaga im on precyzyjnie omijać ostre kolce na gałęziach.</p>
+                                        <p>Podczas naszego wydarzenia charytatywnego dowiesz się, jak opiekunowie dbają o te majestatyczne olbrzymy i jakie są ich ulubione smakołyki. Kupując bilet, wspierasz utrzymanie i pielęgnację tych wyjątkowych zwierząt, które codziennie zachwycają dużych i małych gości.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slides_row">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./images/red_panda2.png" alt="Red Panda" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Pandka ruda</div>
+                                    <div class="text">
+                                        <p>Mała, puszysta i niezwykle urocza – panda ruda (zwana też pandką) to prawdziwa gwiazda łódzkiego zoo. Choć z wyglądu może przypominać szopa pracza, jest bliską krewną morskich ssaków i niedźwiedzi. Większość życia spędza wysoko w koronach drzew, gdzie czuje się najbezpieczniej.</p>
+                                        <p>Te sympatyczne zwierzaki żywią się głównie bambusem, ale nie pogardzą też słodkimi owocami. Pandy rude są niestety gatunkiem zagrożonym wyginięciem w naturze. Dzięki Twojemu wsparciu możemy wspólnie chronić te piękne stworzenia i dbać o ich bezpieczną przyszłość.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slides_row">
+                                <div class="slider">
+                                    <div class="img_container">
+                                        <img src="./images/elephants2.png" alt="Elephant" class="animal_img">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="title3">Słoń</div>
+                                    <div class="text">
+                                        <p>Słonie indyjskie to jedne z najbardziej inteligentnych i towarzyskich istot na naszej planecie. W łódzkim Orientarium mają do dyspozycji jeden z najnowocześniejszych wybiegów w Europie oraz ogromny basen. Ich widowiskowe kąpiele, które można oglądać przez specjalną szybę, zapierają dech w piersiach!</p>
+                                        <p>Nasze słonie, na czele ze słynnym Aleksandrem, mają wspaniałe charaktery i uwielbiają interakcje z opiekunami. Przyjdź na nasze wydarzenie, zobacz pokazowe karmienie i dowiedz się więcej o tych potężnych, ale niezwykle wrażliwych ssakach, które tak bardzo potrzebują naszej pomocy.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="arrow arrow_right" onclick="changeSlide(1)">&#8594;</button>
+                        </div>
+
+                        <div class="dots" id="dots"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- формочка -->
+            <div class="container">
+                    <div class="second_page page" id="zapisy">
+                        <div class="form">
+                            <div class="form_container">
+                                <form action="">
+                                    <div class="title_container">
+                                        <h2 class="title">Zgłoszenie do nas</h2>
+                                    </div>
+                                    <div class = "imie_container input_container">
+                                        <label for="imie">Imię:</label>
+                                        <input type="text" class = "input" placeholder="Imię" name = "imie" required>
+                                    </div>
+                                    <div class = "nazwisko_container input_container">
+                                        <label for="nazwisko">Nazwisko:</label>
+                                        <input type="text" class = "input" placeholder="Nazwisko" name = "nazwisko" required>
+                                    </div>
+                                    <div class = "email_container input_container">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class = "input" placeholder="Email" name = "email" required>
+                                    </div>
+
+                                    <div class = "poczta_container input_container">
+                                        <label for="poczta">Kod pocztowy:</label>
+                                        <input type="text" class = "input" pattern="[0-9]{2}-[0-9]{3}" placeholder="XX-XXX" name = "poczta" required>
+                                    </div>
+
+                              <div class="gender_radio_container input_container">
+                                        <label>Płeć:</label>
+                                        <div class="gender_options">
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="M" required>
+                                                <div class="option_content">
+                                                    <span class="option_marker">A</span>
+                                                    <span class="option_label">Mężczyzna</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="K">
+                                                <div class="option_content">
+                                                    <span class="option_marker">B</span>
+                                                    <span class="option_label">Kobieta</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="gender_option">
+                                                <input type="radio" name="plec" value="N">
+                                                <div class="option_content">
+                                                    <span class="option_marker">C</span>
+                                                    <span class="option_label">Nie podaję</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- можна забрати в теорії-->
+
+
+                                    <!-- <div class = "age_container">
+                                        <label for="wiek">Wiek:</label>
+                                        <input type="radio" id = "adult" name="wiek" value="adult">
+                                        <label for="adult">Dorosły</label>
+                                        <input type="radio" id = "child" name="wiek" value="child">
+                                        <label for="child">Dziecko</label>
+                                        <input type="radio" id = "teen" name="wiek" value="teen">
+                                        <label for="teen">Nastolatek</label>
+                                    </div> -->
+
+                                    <!-- <div class = "info_container">
+                                        <label for="info">Jak dowiedziałeś się o wydarzeniu?</label>
+                                        <input type = "checkbox" id = "od_znajonych" name="info" value="od_znajomych">
+                                        <label for="od_znajonych">Od znajomych</label>
+                                        <input type = "checkbox" id = "w_internecie" name="info" value="w_internecie">
+                                        <label for="w_internecie">W internecie</label>
+                                    </div> -->
+
+
+                                    <button class = "submit_btn" type="submit">Zapisać się</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="goals">
+                            <div class="goals_container">
+                                <div class="title_container">
+                                    <h2 class="title">Nasze cele</h2>
+                                </div>
+                                <div class="goals_content_container">
+                                    <p>Wierzymy, że każde zwierzę zasługuje na bezpieczne życie i troskę. Dlatego naszym celem jest wspieranie zwierząt w Orientarium Zoo w Łodzi – miejscu, gdzie natura spotyka się z człowiekiem.
+                                    Chcemy nie tylko pomagać, ale także inspirować innych do działania. Edukujemy, pokazujemy i zachęcamy, aby każdy mógł stać się częścią tej ważnej misji. Bo nawet najmniejszy gest może zmienić bardzo wiele.
+                                    Każde wsparcie ma znaczenie – dla zwierząt, dla środowiska i dla przyszłych pokoleń.</p>
+                                    <p><b>Co robimy?</b>    <br>•pomagamy poprawiać warunki życia zwierząt
+                                    •wspieramy działania ochronne i ekologiczne
+                                    •organizujemy wydarzenia i akcje edukacyjne
+                                    •budujemy świadomość i wrażliwość na potrzeby natury
+                                     <b>Dołącz do nas i razem twórzmy lepszy świat dla zwierząt!</b></p>
+                                </div>
+                                <div class="zoo_link_container">
+                                    <div class="link_container">
+                                        <a href="https://orientarium.lodz.pl/en/?srsltid=AfmBOopk-19amKLT-cSkVMzCduEy-2oDvmrepHhdewod7ByzMIc-urAi" class="link" target="_blank">
+                                                <img src="./images/logo_lodz.png" alt="" class="img_zoo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_container">
+                <p>&copy; Vadym Riznyk, Denys Orieshkov, Oleh Tokar<br>2026 Zoo Orientarium</p>
+                <address id = "contact">
+                    Bohdana Stefanowskiego 18/22<br>
+                    90-001 Łódź, Polska
+                </address>
+            </div>
+        </div>
+    </footer>
+    <!-- тваринки -->
+    <script>
+        const slides = document.querySelectorAll('.slides_row');
+        const dotsContainer = document.getElementById('dots');
+        let current = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goTo(i);
+            dotsContainer.appendChild(dot);
+        });
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            dotsContainer.children[current].classList.remove('active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dotsContainer.children[current].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            goTo(current + direction);
+        }
+    </script>
+</body>
+</html>
+
+
+
