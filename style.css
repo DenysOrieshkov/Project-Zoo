@@ -635,3 +635,33 @@ input[type="radio"], input[type="checkbox"] {
         gap: 6px;
     }
 }
+.error-text {
+    color: #d32f2f; /* Червоний колір */
+    font-size: 13px;
+    margin-top: 8px;
+    font-weight: bold;
+    animation: shake 0.4s ease-in-out; /* Ефект тремтіння */
+}
+
+/* Ефект для привернення уваги */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Додамо червону рамку кнопкам, якщо не вибрано */
+.form_invalid .option_content {
+    border-color: #d32f2f;
+}
+
+.input_invalid {
+    border-color: #d32f2f !important;
+    background-color: #fff8f8;
+}
+
+/* Робимо так, щоб при фокусі на помилковому полі рамка теж залишалася червоною */
+.input_invalid:focus {
+    border-color: #d32f2f !important;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
