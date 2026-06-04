@@ -274,6 +274,7 @@
         const inputs = document.querySelectorAll('.input');
     
         inputs.forEach(input => {
+            input.value = input.value.trim();
             const errorDiv = document.getElementById(`${input.name}-error`);
              
             if (!input.checkValidity()) {
