@@ -176,29 +176,6 @@
                                         </div>
                                         <div id="gender-error" class="error-text" style="display: none;">Proszę wybrać płeć</div>
                                     </div>
-
-                                    <!-- можна забрати в теорії-->
-
-
-                                    <!-- <div class = "age_container">
-                                        <label for="wiek">Wiek:</label>
-                                        <input type="radio" id = "adult" name="wiek" value="adult">
-                                        <label for="adult">Dorosły</label>
-                                        <input type="radio" id = "child" name="wiek" value="child">
-                                        <label for="child">Dziecko</label>
-                                        <input type="radio" id = "teen" name="wiek" value="teen">
-                                        <label for="teen">Nastolatek</label>
-                                    </div> -->
-
-                                    <!-- <div class = "info_container">
-                                        <label for="info">Jak dowiedziałeś się o wydarzeniu?</label>
-                                        <input type = "checkbox" id = "od_znajonych" name="info" value="od_znajomych">
-                                        <label for="od_znajonych">Od znajomych</label>
-                                        <input type = "checkbox" id = "w_internecie" name="info" value="w_internecie">
-                                        <label for="w_internecie">W internecie</label>
-                                    </div> -->
-
-
                                     <button class = "submit_btn" type="submit">Zapisać się</button>
                                 </form>
                             </div>
@@ -292,7 +269,6 @@
         goTo(current + direction);
     }
 
-    // --- НОВА ВАЛІДАЦІЯ ФОРМИ ---
     document.querySelector('form').addEventListener('submit', function(e) {
         let isFormValid = true;
         const inputs = document.querySelectorAll('.input');
