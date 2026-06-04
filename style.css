@@ -288,7 +288,7 @@ nav{
 .second_page{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
 }
 
@@ -297,8 +297,16 @@ input[type="checkbox"]:first-of-type {
     margin-left: 0;
 }
 
-.form{
+.form {
     min-width: 50%;
+    display: flex;          
+    flex-direction: column; 
+}
+
+.goals {
+    list-style: inside;
+    display: flex;         
+    flex-direction: column; 
 }
 
 .form_container{
@@ -739,14 +747,4 @@ input[type="radio"], input[type="checkbox"] {
     border-color: #d32f2f !important;
     box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
 }
-.form {
-    min-width: 50%;
-    display: flex;         
-    flex-direction: column; 
-}
-
-.goals {
-    list-style: inside;
-    display: flex;         
-    flex-direction: column; 
-}
+ 
