@@ -11,8 +11,8 @@ html {
 
 body{
     height: 100vh;
-   font-family:Cursive;
-   font-size: 15.3333333px;
+    font-family: Cursive;
+    font-size: 17px;
     margin: 0;
     padding: 0;
     color: #333;
@@ -75,6 +75,7 @@ nav{
     text-transform: uppercase;
    
     font-weight: 300; 
+    font-size: 15px;
     letter-spacing: 0.18em;
 
     position: relative;
@@ -144,11 +145,9 @@ nav{
 .info_title_box h2 {
     display: inline-block;
     padding: 15px 50px;
-    font-size: 25px;
     font-weight: 400;
 }
 .info_content {
-     font-size: 18.68px;
     overflow: hidden; 
 }
 .info_img_right {
@@ -204,10 +203,10 @@ nav{
 }
 
 .slides_row {
-    min-height: 300px;
+    min-height: 350px;
     display: none;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     align-items: stretch;
     padding: 0 20px;
     flex: 1;
@@ -233,8 +232,8 @@ nav{
 }
 
 .img_container {
-    height: 250px;
-    width: 200px;
+    height: 320px;
+    width: 250px;
     overflow: hidden;
     border-radius: 4px;
     background-color: #d2d2d2;
@@ -253,8 +252,8 @@ nav{
 .arrow {
     position: relative;
     background: none;
-    border: 2px solid #5a9e6f;
-    color: #5a9e6f;
+    border: 2px solid #2E7D32;
+    color: #2E7D32;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -266,7 +265,7 @@ nav{
 }
 
 .arrow:hover {
-    background: #5a9e6f;
+    background: #2E7D32;
     color: white;
 }
 
@@ -282,13 +281,13 @@ nav{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #b0d4ba;
+    background: #8bbb8e;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 .dot.active {
-    background: #5a9e6f;
+    background: #2E7D32;
 }
 
 
@@ -297,6 +296,7 @@ nav{
 .second_page{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
@@ -329,21 +329,29 @@ input[type="checkbox"]:first-of-type {
     align-items: center;
     gap: 15px;
 }
-.submit_btn{
-    padding: 10px 30px;
-    width: 40%;
+.submit_btn {
+    padding: 14px 0;
+    width: 60%;
     background-color: transparent;
-    border: 2px solid green;
+    border: 1.5px solid #2E7D32;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 17px;
-    
+    border-radius: 6px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    color: #222;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
 }
-.submit_btn:hover{
-    background-color: green;
-    color: white;
-    transition-duration: 250ms;
+
+.submit_btn:hover {
+    background-color: #2E7D32;
+    color: #fff;
+    border-color: #2E7D32;
+}
+
+.submit_btn:active {
+    transform: scale(0.97);
+    transition-duration: 0.05s;
 }
 
 form label{
@@ -375,7 +383,7 @@ select.input {
 
 /* Efekt po kliknięciu/aktywacji pola */
 select.input:focus {
-    border-color: green;
+    border-color: #2E7D32;
     box-shadow: 0 0 5px rgba(0, 128, 0, 0.2);
 }
 .age_container label{
@@ -398,7 +406,7 @@ select.input:focus {
 }
 .input:focus{
     outline: none;
-    border-color: green;
+    border-color: #2E7D32;
 }
 
 /*GOALS*/
