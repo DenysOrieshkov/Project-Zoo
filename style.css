@@ -12,7 +12,7 @@ html {
 body{
     height: 100vh;
     font-family: Cursive;
-    font-size: 17px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     color: #333;
@@ -74,7 +74,7 @@ nav{
     text-transform: uppercase;
    
     font-weight: 300; 
-    font-size: 15px;
+    font-size: 1.1em;
     letter-spacing: 0.18em;
 
     position: relative;
@@ -134,6 +134,7 @@ nav{
 
 .info{
     width: 100%;
+    font-size: 1.3em;
 }
 .info_title_box {
     text-align: center;
@@ -184,6 +185,7 @@ nav{
 /*-------------- ZWIRI SLIDER --------------*/
 .slides {
     display: block;
+    font-size: 1.3em;
 }
 
 .slides_container {
@@ -198,7 +200,7 @@ nav{
 }
 
 .slides_row {
-    min-height: 350px;
+    min-height: 360px;
     display: none;
     flex-direction: row;
     gap: 30px;
@@ -227,8 +229,8 @@ nav{
 }
 
 .img_container {
-    height: 320px;
-    width: 250px;
+    height: 330px;
+    width: 260px;
     overflow: hidden;
     border-radius: 4px;
     background-color: #d2d2d2;
@@ -296,11 +298,7 @@ input[type="checkbox"]:first-of-type {
     margin-left: 0;
 }
 
-.form {
-    min-width: 50%;
-    display: flex;          
-    flex-direction: column; 
-}
+
 
 .goals {
     list-style: inside;
@@ -308,7 +306,18 @@ input[type="checkbox"]:first-of-type {
     flex-direction: column; 
 }
 
+.form_actual{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .form_container{
+    min-width: 50%;
+    display: flex;        
+    flex-direction: column; 
+
     max-width: 600px;
     margin: 0;
     font-size: 17px;
@@ -415,6 +424,7 @@ select.input:focus {
     padding: 20px 30px;
 }
 .goals {
+    font-size: 1.2em;
     list-style: inside;
 }
 
@@ -430,7 +440,7 @@ select.input:focus {
 footer {
     background-color: #1a1a1a;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .footer_top {
@@ -618,7 +628,6 @@ footer {
 
 .form_container h2, .goals_container h2 {
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .goals_content_container p {
