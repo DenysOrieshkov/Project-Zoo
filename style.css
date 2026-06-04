@@ -5,6 +5,9 @@
     padding: 0;
     line-height: 1.5;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     height: 100vh;
@@ -98,10 +101,16 @@ nav{
 .menu a:hover::after {
     width: calc(100% - 64px);
 }
+.menu a:active {
+    color: rgba(255, 255, 255, 0.5);
+    transform: translateY(2px);
+    transition-duration: 0.05s;
+}
+
 
 
 .page{
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 .first_page{
@@ -110,6 +119,16 @@ nav{
     background-position: center;
     background-size:cover;
     height: 100vh;
+    width: 100%;
+}
+
+.first_page_connect{
+    background-image: url(./images/leaves_connect.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    background-color: transparent;
+    height: 150px;
     width: 100%;
 }
 
@@ -168,8 +187,7 @@ nav{
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
 
-
-/*-----------------Slides-----------------*/
+/*Slides*/
 .slides {
     display: block;
 }
@@ -274,9 +292,8 @@ nav{
 }
 
 
-/*-----------------Slides-----------------*/
+/**second_page*/
 
-/*-----------------second_page-----------------*/
 .second_page{
     display: flex;
     justify-content: space-between;
@@ -459,34 +476,33 @@ footer{
 .link_container {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.link_container a {
+
+.link {
     display: inline-block;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -5px 5px 0px #000000;
+}
+
+.link:active {
+    transform: translate(-2px, 2px);
+    box-shadow: -1px 1px 0px #000000;
+    transition-duration: 0.05s;
 }
 
 .img_zoo {
-    width: 80%;
     height: auto;
     display: block;
     border-radius: 8px;
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.img_zoo:hover {
-    /* Піднімається — тінь падає вліво-вниз */
-    transform: translate(4px, -4px);
-    box-shadow: 
-        -8px 8px 0px #888,
-}
-
-.img_zoo:active {
-    transform: translate(4px, -4px);
-    box-shadow: 
-        1px 1px 0px #888,
-        2px 2px 0px #aaa;
-    transition-duration: 0.05s;
 }
 
 
