@@ -298,11 +298,7 @@ input[type="checkbox"]:first-of-type {
     margin-left: 0;
 }
 
-.form {
-    min-width: 50%;
-    display: flex;          
-    flex-direction: column; 
-}
+
 
 .goals {
     list-style: inside;
@@ -310,7 +306,18 @@ input[type="checkbox"]:first-of-type {
     flex-direction: column; 
 }
 
+.form_actual{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .form_container{
+    min-width: 50%;
+    display: flex;        
+    flex-direction: column; 
+
     max-width: 600px;
     margin: 0;
     font-size: 17px;
@@ -621,7 +628,6 @@ footer {
 
 .form_container h2, .goals_container h2 {
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .goals_content_container p {
