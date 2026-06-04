@@ -152,7 +152,6 @@ nav{
     width: 160px;
     height: 200px;
     margin: 0 0 20px 30px;  
-    border: 1px dashed #9b9b9b;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +162,6 @@ nav{
     width: 160px;
     height: 200px;
     margin: 10px 30px 20px 0;  
-    border: 1px dashed #9b9b9b;   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,6 +174,7 @@ nav{
 .responsive_img {
     max-width: 100%;
     height: auto;
+    border-radius: 7px;
     display: block;  
     object-fit: cover;  
 }
