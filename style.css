@@ -26,6 +26,7 @@ body{
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0;
 }
 
 main{
@@ -112,8 +113,10 @@ nav{
     background-position: center;
     background-size:cover;
     height: 100vh;
+    height: 100dvh; 
     width: 100%;
 }
+
 
 .first_page_connect{
     background-image: url(./images/leaves_connect.png);
@@ -124,6 +127,8 @@ nav{
     height: 67px;
     width: 100%;
 }
+
+
 
 /*-----------------СТАРТ БЛОКУ ІНФИ-----------------*/
 
@@ -300,12 +305,6 @@ nav{
 .dot.active {
     background: #2E7D32;
 }
-.second_page{
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 20px;
-}
 
 input[type="radio"]:first-of-type, 
 input[type="checkbox"]:first-of-type {
@@ -313,6 +312,13 @@ input[type="checkbox"]:first-of-type {
 }
 
 
+
+.second_page{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
 
 .goals {
     list-style: inside;
@@ -340,10 +346,6 @@ input[type="checkbox"]:first-of-type {
     color: black;
     padding: 20px 30px;
     position: relative;
-}
-.footer_container h2{
-    text-align: center;
-    margin: 0px auto;
 }
 .form_container form{
     display: flex;
@@ -640,9 +642,6 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.form_container h2, .goals_container h2 {
-    text-align: center;
-}
 
 .goals_content_container p {
     line-height: 1.7;
@@ -769,4 +768,139 @@ input[type="radio"], input[type="checkbox"] {
     border-color: #d32f2f !important;
     box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
 }
- 
+
+
+
+
+/*Adaptation*/
+@media (max-width: 768px) {
+    .container{
+        max-width: 270px;
+    }
+    .page{
+        padding: 10px 0;
+    }
+
+
+
+    .first_page {
+        background-position: 100% center;
+        height: 50vh;
+    }
+    .first_page_connect{
+        display: none;
+    }
+
+
+    /*-----------------СТАРТ БЛОКУ ІНФИ-----------------*/
+    .info {
+        font-size: 1em;
+    }
+
+    .info_img_right,
+    .info_img_left {
+        float: none;
+        width: 100%;
+        height: 220px;
+        margin: 0 0 16px 0;
+    }
+
+    .info_img_right img,
+    .info_img_left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info_content p {
+        text-align: left;
+    }
+    /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
+    
+} 
+
+
+@media (max-width: 768px) {
+    .slides {
+        font-size: 1em;
+    }
+
+    .slider_wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .slides_row {
+        flex-direction: column;
+        min-height: unset;
+        padding: 0;
+        gap: 16px;
+    }
+
+    .img_container {
+        width: 100%;
+        height: 260px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .dots {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 8px 0 0;
+    }
+
+    .arrow_left,
+    .arrow_right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .second_page {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form_container {
+        max-width: 100%;
+        min-width: unset;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form_container form {
+        gap: 12px;
+    }
+
+    .input_container {
+        width: 100%;
+    }
+
+    .submit_btn {
+        width: 100%;
+    }
+
+    .goals_container {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .goals {
+        font-size: 1em;
+    }
+
+    .img_zoo {
+        width: 100%;
+    }
+}
