@@ -169,8 +169,8 @@ nav{
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% auto;
+    height: 80px;
     background-color: transparent;
-    height: 67px;
     width: 100%;
 }
 
