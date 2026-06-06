@@ -11,21 +11,22 @@
 
     <header>
         <nav>
-            <ul class = "menu">
-                <li class = "menu_item first"><a href="#dom">Główna</a></li>
-                <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
-                <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
-                <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
-                <li class = "menu_item"><a href="#contact">Kontakty</a></li>
-            </ul>    
+            <div class="container">
+                <ul class = "menu">
+                    <li class = "menu_item first"><a href="#dom">Główna</a></li>
+                    <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
+                    <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
+                    <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
+                    <li class = "menu_item"><a href="#contact">Kontakty</a></li>
+                </ul> 
+            </div>
         </nav>
     </header>
-
     <main>
         <div class = "main_content">
            <!-- ТІГРУСИk ПОТУЖНІЧ-->
             <div class="first_page page" id="dom"> </div> 
-            <div class="first_page_connect page" id="dom"> </div> 
+            <div class="first_page_connect" id="dom"> </div>
            
            <!-- Інфа пр0 ЗАХІД -->
             <div class="info page" id="info"> 
@@ -35,19 +36,24 @@
                     </div>
 
                     <div class="info_content">
-                        <div class="info_img_right">
-                            <img src="./images/elephant.jpg" alt="Slon" class="responsive_img">
-                         </div>
-                        
-                        <p>Kochasz zwierzęta? My też! Dlatego organizujemy wyjątkowy dzień w łódzkim zoo — pełen zabawy, emocji i dobrego serca. Przyjdź, pobaw się i pomóż nam zadbać o naszych futrzastych przyjaciół!</p>
-                        <p>Każdy bilet to realna pomoc dla zwierząt. Proste, prawda? </p>
-
-                        <div class="info_img_left">
-                            <img src="./images/red_panda.jpg" alt="PandaM" class="responsive_img">
+                        <div class="info_row">
+                            <div class="info_text">
+                                <p>Kochasz zwierzęta? My też! Dlatego organizujemy wyjątkowy dzień w łódzkim zoo — pełen zabawy, emocji i dobrego serca. Przyjdź, pobaw się i pomóż nam zadbać o naszych futrzastych przyjaciół!</p>
+                                <p>Każdy bilet to realna pomoc dla zwierząt. Proste, prawda?</p>
+                            </div>
+                            <div class="info_img">
+                                <img src="./images/elephant.jpg" alt="Slon" class="responsive_img">
+                            </div>
                         </div>
-                        <br> <br>  
-                        <p>Czeka na Ciebie karmienie zwierząt, warsztaty dla dzieci, konkursy z nagrodami i mnóstwo niespodzianek! Przyjdź z rodziną, znajomymi — albo po prostu sam. Tu każdy jest mile widziany, a zwierzęta będą Ci za to wdzięczne!</p>
-                        
+
+                        <div class="info_row reverse">
+                            <div class="info_text">
+                                <p>Czeka na Ciebie karmienie zwierząt, warsztaty dla dzieci, konkursy z nagrodami i mnóstwo niespodzianek! Przyjdź z rodziną, znajomymi — albo po prostu sam. Tu każdy jest mile widziany, a zwierzęta będą Ci za to wdzięczne!</p>
+                            </div>
+                            <div class="info_img">
+                                <img src="./images/red_panda.jpg" alt="PandaM" class="responsive_img">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +68,6 @@
 
                         <div class="slider_wrapper">
                             <button class="arrow arrow_left" onclick="changeSlide(-1)">&#8592;</button>
-
                             <div class="slides_row active">
                                 <div class="slider">
                                     <div class="img_container">
@@ -107,7 +112,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <button class="arrow arrow_right" onclick="changeSlide(1)">&#8594;</button>
                         </div>
 
@@ -200,7 +204,7 @@
                                     <div class="link_container">
                                         <a href="https://orientarium.lodz.pl/en/?srsltid=AfmBOopk-19amKLT-cSkVMzCduEy-2oDvmrepHhdewod7ByzMIc-urAi" class="link" target="_blank">
                                             <img src="./images/logo_lodz1.png" alt="" class="img_zoo">
-                                        </a>
+                                        </a>    
                                     </div>
                                 </div>
                             </div>  
@@ -246,31 +250,46 @@
     </div>
 </footer>
 
-    <script>
-        const slides = document.querySelectorAll('.slides_row');
+<script>
+    const slides = document.querySelectorAll('.slides_row');
     const dotsContainer = document.getElementById('dots');
     let current = 0;
+    const dots = [];
 
     slides.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.className = 'dot' + (i === 0 ? ' active' : '');
         dot.onclick = () => goTo(i);
         dotsContainer.appendChild(dot);
+        dots.push(dot);
     });
 
     function goTo(index) {
         slides[current].classList.remove('active');
-        dotsContainer.children[current].classList.remove('active');
+        dots[current].classList.remove('active');
         current = (index + slides.length) % slides.length;
         slides[current].classList.add('active');
-        dotsContainer.children[current].classList.add('active');
+        dots[current].classList.add('active');
     }
 
     function changeSlide(direction) {
         goTo(current + direction);
     }
 
-    document.querySelector('form').addEventListener('submit', async function(e) {
+    function setupMobileArrows() {
+        if (window.innerWidth <= 768) {
+            const leftArrow = document.querySelector('.arrow_left');
+            const rightArrow = document.querySelector('.arrow_right');
+            dotsContainer.insertBefore(leftArrow, dotsContainer.firstChild);
+            dotsContainer.appendChild(rightArrow);
+        }
+    }
+
+    setupMobileArrows();
+
+
+
+    document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault(); 
         
         let isFormValid = true;
@@ -309,58 +328,37 @@
         }
  
         if (isFormValid) {
-            
-            if (!messageDiv) {
-                alert("ERROR: server-message block not found in HTML");
-                return;
-            }
-
             const formData = {
                 imie: document.querySelector('input[name="imie"]').value,
                 nazwisko: document.querySelector('input[name="nazwisko"]').value,
                 email: document.querySelector('input[name="email"]').value,
-                kodPocztowy: document.querySelector('input[name="poczta"]').value,
+                poczta: document.querySelector('input[name="poczta"]').value,
                 plec: genderChecked.value
             };
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-            try {
-                // send request in port 3001
-                const response = await fetch('http://localhost:3001', {
-                    method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Bypass-Tunnel-Reminder': 'true' 
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-                
-                messageDiv.style.display = 'block';
-
-                if (response.status === 409) {
-                    // ERROR: email is already existed
-                    messageDiv.style.backgroundColor = '#ffebee';
-                    messageDiv.style.color = '#d32f2f';
-                    messageDiv.style.border = '1px solid #d32f2f';
-                    messageDiv.innerText = data.error;
-                } else if (response.ok) {
-                    // success
-                    messageDiv.style.backgroundColor = '#e8f5e9';
-                    messageDiv.style.color = '#2e7d32';
-                    messageDiv.style.border = '1px solid #2e7d32';
-                    messageDiv.innerText = data.success;
-                    
-                    document.querySelector('.form_actual').reset();
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Błąd serwera: ' + response.status);
                 }
-            } catch (error) {
-                // ERROR: server off
-                messageDiv.style.display = 'block';
-                messageDiv.style.backgroundColor = '#ffebee';
-                messageDiv.style.color = '#d32f2f';
-                messageDiv.style.border = '1px solid #d32f2f';
-                messageDiv.innerText = 'Błąd połączenia z serwerem. Upewnij się, że backend jest włączony!';
-            }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Sukces:', data);
+                alert('Dziękujemy! Zgłoszenie zostało pomyślnie wysłane.');
+                document.querySelector('.form_actual').reset();  
+            })
+            .catch(error => { 
+                console.error('Błąd:', error);
+                alert('Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie.');
+            });
         }
     });
 </script>
