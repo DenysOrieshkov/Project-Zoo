@@ -827,7 +827,9 @@ input[type="radio"], input[type="checkbox"] {
     .page{
         padding: 20px 0;
     }
-
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+    }
 
 
     .first_page {
