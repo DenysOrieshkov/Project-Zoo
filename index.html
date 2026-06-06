@@ -124,6 +124,9 @@
                                 <div class="title_container">
                                     <h2 class="title">Zgłoszenie do nas</h2>
                                 </div>
+
+                                <div id="server-message" style="display: none; padding: 10px; margin-bottom: 15px; border-radius: 5px; font-weight: bold;"></div>
+
                                 <div class = "imie_container input_container">
                                     <label for="imie">Imię:</label>
                                     <input type="text" class = "input" placeholder="Imię" name = "imie" required>
@@ -245,8 +248,8 @@
 
     <script>
         const slides = document.querySelectorAll('.slides_row');
-        const dotsContainer = document.getElementById('dots');
-        let current = 0;
+    const dotsContainer = document.getElementById('dots');
+    let current = 0;
 
     slides.forEach((_, i) => {
         const dot = document.createElement('div');
@@ -267,10 +270,17 @@
         goTo(current + direction);
     }
 
-    document.querySelector('form').addEventListener('submit', function(e) {
+    document.querySelector('form').addEventListener('submit', async function(e) {
+        e.preventDefault(); 
+        
         let isFormValid = true;
         const inputs = document.querySelectorAll('.input');
-    
+        
+        const messageDiv = document.getElementById('server-message');
+        
+        if (messageDiv) {
+            messageDiv.style.display = 'none'; 
+        }
         inputs.forEach(input => {
             input.value = input.value.trim();
             const errorDiv = document.getElementById(`${input.name}-error`);
@@ -298,8 +308,59 @@
             genderContainer.classList.remove('form_invalid');
         }
  
-        if (!isFormValid) {
-            e.preventDefault();
+        if (isFormValid) {
+            
+            if (!messageDiv) {
+                alert("ERROR: server-message block not found in HTML");
+                return;
+            }
+
+            const formData = {
+                imie: document.querySelector('input[name="imie"]').value,
+                nazwisko: document.querySelector('input[name="nazwisko"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                kodPocztowy: document.querySelector('input[name="poczta"]').value,
+                plec: genderChecked.value
+            };
+
+            try {
+                // send request in port 3001
+                const response = await fetch('http://localhost:3001', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Bypass-Tunnel-Reminder': 'true' 
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                
+                messageDiv.style.display = 'block';
+
+                if (response.status === 409) {
+                    // ERROR: email is already existed
+                    messageDiv.style.backgroundColor = '#ffebee';
+                    messageDiv.style.color = '#d32f2f';
+                    messageDiv.style.border = '1px solid #d32f2f';
+                    messageDiv.innerText = data.error;
+                } else if (response.ok) {
+                    // success
+                    messageDiv.style.backgroundColor = '#e8f5e9';
+                    messageDiv.style.color = '#2e7d32';
+                    messageDiv.style.border = '1px solid #2e7d32';
+                    messageDiv.innerText = data.success;
+                    
+                    document.querySelector('.form_actual').reset();
+                }
+            } catch (error) {
+                // ERROR: server off
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#ffebee';
+                messageDiv.style.color = '#d32f2f';
+                messageDiv.style.border = '1px solid #d32f2f';
+                messageDiv.innerText = 'Błąd połączenia z serwerem. Upewnij się, że backend jest włączony!';
+            }
         }
     });
 </script>
