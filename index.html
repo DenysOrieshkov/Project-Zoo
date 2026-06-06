@@ -11,17 +11,24 @@
 
     <header>
         <nav>
-            <div class="container">
-                <ul class = "menu">
-                    <li class = "menu_item first"><a href="#dom">Główna</a></li>
-                    <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
-                    <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
-                    <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
-                    <li class = "menu_item"><a href="#contact">Kontakty</a></li>
-                </ul> 
+            <div class="container nav_container">
+                <button class="burger" id="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu" id="menu">
+                    <li class="menu_item first"><a href="#dom" onclick="closeMenu()">Główna</a></li>
+                    <li class="menu_item"><a href="#info" onclick="closeMenu()">O wydarzeniu</a></li>
+                    <li class="menu_item"><a href="#slides" onclick="closeMenu()">Zwierzęta</a></li>
+                    <li class="menu_item"><a href="#zapisy" onclick="closeMenu()">Zapisy</a></li>
+                    <li class="menu_item"><a href="#contact" onclick="closeMenu()">Kontakty</a></li>
+                </ul>
             </div>
         </nav>
     </header>
+
+
     <main>
         <div class = "main_content">
            <!-- ТІГРУСИk ПОТУЖНІЧ-->
@@ -286,6 +293,21 @@
     }
 
     setupMobileArrows();
+
+    function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const burger = document.getElementById('burger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+    }
+
+    function closeMenu() {
+        document.getElementById('menu').classList.remove('open');
+        document.getElementById('burger').classList.remove('open');
+    }
+
+
+
 
     document.querySelector('form').addEventListener('submit', async function(e) {
         e.preventDefault(); 

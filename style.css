@@ -38,6 +38,15 @@ ul{
     padding: 0;
 }
  
+
+
+/*Menu*/
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+}
 nav{
     background-color: #333;
     width: 100%;
@@ -104,6 +113,43 @@ nav{
     transform: translateY(2px);
     transition-duration: 0.05s;
 }
+
+
+/*Burger-menu*/
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+.burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+
+
 .page{
     padding: 50px 0;
 }
@@ -127,6 +173,7 @@ nav{
     height: 67px;
     width: 100%;
 }
+
 
 
 
@@ -778,14 +825,14 @@ input[type="radio"], input[type="checkbox"] {
         max-width: 270px;
     }
     .page{
-        padding: 10px 0;
+        padding: 20px 0;
     }
 
 
 
     .first_page {
         background-position: 100% center;
-        height: 50vh;
+        height: 40vh;
     }
     .first_page_connect{
         display: none;
@@ -867,7 +914,7 @@ input[type="radio"], input[type="checkbox"] {
 
 @media (max-width: 768px) {
     .second_page {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 10px;
     }
 
@@ -904,3 +951,46 @@ input[type="radio"], input[type="checkbox"] {
         width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .nav_container{
+        justify-content: flex-end;
+        height: 40px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        height: auto;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+        padding: 8px 0;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu_item {
+        width: 100%;
+    }
+
+    .menu a {
+        height: 52px;
+        padding: 0 24px;
+        font-size: 0.95em;
+        justify-content: flex-start;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+}   
