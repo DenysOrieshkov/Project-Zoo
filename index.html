@@ -11,21 +11,22 @@
 
     <header>
         <nav>
-            <ul class = "menu">
-                <li class = "menu_item first"><a href="#dom">Główna</a></li>
-                <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
-                <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
-                <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
-                <li class = "menu_item"><a href="#contact">Kontakty</a></li>
-            </ul>    
+            <div class="container">
+                <ul class = "menu">
+                    <li class = "menu_item first"><a href="#dom">Główna</a></li>
+                    <li class = "menu_item"><a href="#info">O wydarzeniu</a></li>
+                    <li class = "menu_item"><a href="#slides">Zwierzęta</a></li>
+                    <li class = "menu_item"><a href="#zapisy">Zapisy</a></li>
+                    <li class = "menu_item"><a href="#contact">Kontakty</a></li>
+                </ul> 
+            </div>
         </nav>
     </header>
-
     <main>
         <div class = "main_content">
            <!-- ТІГРУСИk ПОТУЖНІЧ-->
             <div class="first_page page" id="dom"> </div> 
-            <div class="first_page_connect page" id="dom"> </div> 
+            <div class="first_page_connect" id="dom"> </div>
            
            <!-- Інфа пр0 ЗАХІД -->
             <div class="info page" id="info"> 
@@ -62,7 +63,6 @@
 
                         <div class="slider_wrapper">
                             <button class="arrow arrow_left" onclick="changeSlide(-1)">&#8592;</button>
-
                             <div class="slides_row active">
                                 <div class="slider">
                                     <div class="img_container">
@@ -107,7 +107,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <button class="arrow arrow_right" onclick="changeSlide(1)">&#8594;</button>
                         </div>
 
@@ -243,29 +242,44 @@
     </div>
 </footer>
 
-    <script>
-        const slides = document.querySelectorAll('.slides_row');
-        const dotsContainer = document.getElementById('dots');
-        let current = 0;
+<script>
+    const slides = document.querySelectorAll('.slides_row');
+    const dotsContainer = document.getElementById('dots');
+    let current = 0;
+    const dots = [];
 
     slides.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.className = 'dot' + (i === 0 ? ' active' : '');
         dot.onclick = () => goTo(i);
         dotsContainer.appendChild(dot);
+        dots.push(dot);
     });
 
     function goTo(index) {
         slides[current].classList.remove('active');
-        dotsContainer.children[current].classList.remove('active');
+        dots[current].classList.remove('active');
         current = (index + slides.length) % slides.length;
         slides[current].classList.add('active');
-        dotsContainer.children[current].classList.add('active');
+        dots[current].classList.add('active');
     }
 
     function changeSlide(direction) {
         goTo(current + direction);
     }
+
+    function setupMobileArrows() {
+        if (window.innerWidth <= 768) {
+            const leftArrow = document.querySelector('.arrow_left');
+            const rightArrow = document.querySelector('.arrow_right');
+            dotsContainer.insertBefore(leftArrow, dotsContainer.firstChild);
+            dotsContainer.appendChild(rightArrow);
+        }
+    }
+
+    setupMobileArrows();
+
+
 
     document.querySelector('form').addEventListener('submit', function(e) {
         let isFormValid = true;
