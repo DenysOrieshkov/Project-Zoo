@@ -958,7 +958,7 @@ input[type="radio"], input[type="checkbox"] {
     }
     .nav_container{
         justify-content: flex-end;
-        height: 40px;
+        height: 32px;
     }
 
     .menu {
@@ -966,7 +966,7 @@ input[type="radio"], input[type="checkbox"] {
         flex-direction: column;
         height: auto;
         position: absolute;
-        top: 40px;
+        top: 32px;
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.85);
@@ -984,7 +984,7 @@ input[type="radio"], input[type="checkbox"] {
     }
 
     .menu a {
-        height: 52px;
+        height: 70px;
         padding: 0 24px;
         font-size: 0.95em;
         justify-content: flex-start;
