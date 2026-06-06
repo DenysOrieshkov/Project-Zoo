@@ -95,7 +95,6 @@ nav{
 .menu a:hover {
     color: rgba(255, 255, 255, 1);
 }
-
 .menu a:hover::after {
     width: calc(100% - 64px);
 }
@@ -104,13 +103,9 @@ nav{
     transform: translateY(2px);
     transition-duration: 0.05s;
 }
-
-
-
 .page{
     padding: 50px 0;
 }
-
 .first_page{
     background-image: url(./images/tiger.jpg);
     background-repeat: no-repeat;
@@ -126,7 +121,7 @@ nav{
     background-position: top;
     background-size: 100% auto;
     background-color: transparent;
-    height: 150px;
+    height: 67px;
     width: 100%;
 }
 
