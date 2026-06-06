@@ -910,7 +910,7 @@ input[type="radio"], input[type="checkbox"] {
         position: static;
     }
 }
-
+/*ПОТУЖНІЧ*/
 
 @media (max-width: 768px) {
     .second_page {
