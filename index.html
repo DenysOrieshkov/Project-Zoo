@@ -287,9 +287,7 @@
 
     setupMobileArrows();
 
-
-
-    document.querySelector('form').addEventListener('submit', function(e) {
+    document.querySelector('form').addEventListener('submit', async function(e) {
         e.preventDefault(); 
         
         let isFormValid = true;
@@ -300,6 +298,7 @@
         if (messageDiv) {
             messageDiv.style.display = 'none'; 
         }
+
         inputs.forEach(input => {
             input.value = input.value.trim();
             const errorDiv = document.getElementById(`${input.name}-error`);
@@ -332,33 +331,53 @@
                 imie: document.querySelector('input[name="imie"]').value,
                 nazwisko: document.querySelector('input[name="nazwisko"]').value,
                 email: document.querySelector('input[name="email"]').value,
-                poczta: document.querySelector('input[name="poczta"]').value,
+                kodPocztowy: document.querySelector('input[name="poczta"]').value, 
                 plec: genderChecked.value
             };
-            const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-            fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Błąd serwera: ' + response.status);
+            try {
+                const apiUrl = 'https://bumpy-chairs-agree.loca.lt/api/zgloszenie'; 
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Bypass-Tunnel-Reminder': 'true' 
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                
+                if (messageDiv) messageDiv.style.display = 'block';
+
+                if (response.status === 409) {
+                    // ERROR: email already exists
+                    messageDiv.style.backgroundColor = '#ffebee';
+                    messageDiv.style.color = '#d32f2f';
+                    messageDiv.style.border = '1px solid #d32f2f';
+                    messageDiv.innerText = data.error;
+                } else if (response.ok) {
+                    // SUCCESS
+                    messageDiv.style.backgroundColor = '#e8f5e9';
+                    messageDiv.style.color = '#2e7d32';
+                    messageDiv.style.border = '1px solid #2e7d32';
+                    messageDiv.innerText = data.success;
+                    
+                    document.querySelector('.form_actual').reset();  
+                } else {
+                    throw new Error(data.error || 'Błąd serwera');
                 }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Sukces:', data);
-                alert('Dziękujemy! Zgłoszenie zostało pomyślnie wysłane.');
-                document.querySelector('.form_actual').reset();  
-            })
-            .catch(error => { 
+            } catch (error) { 
                 console.error('Błąd:', error);
-                alert('Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie.');
-            });
+                if (messageDiv) {
+                    messageDiv.style.display = 'block';
+                    messageDiv.style.backgroundColor = '#ffebee';
+                    messageDiv.style.color = '#d32f2f';
+                    messageDiv.style.border = '1px solid #d32f2f';
+                    messageDiv.innerText = 'Błąd połączenia z serwerem. Upewnij się, że backend jest włączony!';
+                }
+            }
         }
     });
 </script>
