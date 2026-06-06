@@ -132,54 +132,73 @@ nav{
 
 /*-----------------СТАРТ БЛОКУ ІНФИ-----------------*/
 
-.info{
+.info {
     width: 100%;
     font-size: 1.3em;
 }
-.info_title_box {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.info_title_box h2 {
-    display: inline-block;
-    padding: 15px 50px;
-    font-weight: 400;
-}
+
 .info_content {
-    overflow: hidden; 
-}
-.info_img_right {
-    float: right;  
-    width: 160px;
-    height: 200px;
-    margin: 0 0 20px 30px;  
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-}
-.info_img_left {
-    float: left;  
-    width: 160px;
-    height: 200px;
-    margin: 10px 30px 20px 0;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-}
-.info_content p {
-    margin-bottom: 15px;
-    text-align: justify;  
-}
-.responsive_img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 7px;
-    display: block;  
-    object-fit: cover;  
+    flex-direction: column;
+    gap: 40px;  
+    margin-top: 20px;
 }
 
+.info_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;  
+}
+ 
+.info_row.reverse {
+    flex-direction: row-reverse;
+}
+
+.info_text {
+    flex: 1.5;
+}
+
+.info_text p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.info_text p:last-child {
+    margin-bottom: 0;
+}
+
+.info_img {
+    flex: 1;
+    max-width: 300px;  
+    width: 100%;
+}
+
+.responsive_img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;  
+    display: block; 
+    object-fit: cover; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);  
+}
+ 
+@media (max-width: 768px) {
+    .info_row, .info_row.reverse {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .info_img {
+        max-width: 100%;
+    }
+    .responsive_img {
+        height: auto;
+        max-height: 250px;
+    }
+}
 /*-----------------КІНЕЦЬ БЛОКУ ІНФИ-----------------*/
 
 /*-------------- ZWIRI SLIDER --------------*/
